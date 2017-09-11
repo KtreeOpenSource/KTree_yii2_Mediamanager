@@ -1,0 +1,26 @@
+{
+    "name": "ktree/filemanager",
+    "description": "Yii2 filemanager",
+    "type": "yii2-extension",
+    "authors": [
+        {
+            "name": "ktree"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "yiisoft/yii2": "*",
+        "yiisoft/yii2-imagine": "*",
+        "bower-asset/jstree": "*",
+        "ktree/grid" : "*",
+        "embed/embed" : "2.5.6",
+        "2amigos/yii2-gallery-widget" : "~1.0",
+        "tinymce/tinymce": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ktree\\filemanager\\": ""
+        }
+    }
+}

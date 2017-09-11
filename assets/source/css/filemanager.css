@@ -1,0 +1,634 @@
+/*------------------------------------*\
+    #VARIABLES
+\*------------------------------------*/
+/*------------------------------------*\
+    #MAIN
+\*------------------------------------*/
+#header {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 5px;
+}
+
+/*------------------------------------*\
+    #ITEMS
+\*------------------------------------*/
+.list-view {
+    float: left;
+    width: 660px;
+}
+
+.list-view .items {
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.list-view .items .item {
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.list-view .items .item a {
+    position: relative;
+    display: inline-block;
+    color: #5ba6f7;
+}
+
+.list-view .items .item a img {
+    min-width: 128px;
+    min-height: 128px;
+    opacity: .8;
+}
+
+.list-view .items .item a img:hover {
+    opacity: 1;
+}
+
+.list-view .items .item a .checked {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    font-size: 3em;
+}
+
+.list-view .items .item .active {
+    outline: 5px solid #5ba6f7;
+    outline-offset: -5px;
+}
+
+.list-view .items .item .active img {
+    opacity: 1;
+}
+
+.list-view .items .item .active .checked {
+    display: inline-block;
+}
+
+/*------------------------------------*\
+    #PAGINATION
+\*------------------------------------*/
+.pagination {
+    display: block;
+    margin-top: 10px;
+}
+
+/*------------------------------------*\
+    #DASHBOARD
+\*------------------------------------*/
+.dashboard {
+    width: 290px;
+    float: left;
+    padding-left: 10px;
+}
+
+.dashboard .loading {
+    width: 298px;
+    margin-top: 50px;
+    font-size: 5em;
+    color: #5ba6f7;
+    text-align: center;
+}
+
+/*------------------------------------*\
+    #UPLOAD MANAGER
+\*------------------------------------*/
+#uploadmanager {
+    padding: 0 15px 0 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+#uploadmanager .progress {
+    margin-top: 10px;
+}
+
+/*------------------------------------*\
+    #FILEINFO
+\*------------------------------------*/
+#fileinfo img {
+    float: left;
+    max-width: 82px;
+}
+
+#fileinfo .detail {
+    float: left;
+    margin: 0 0 0 10px;
+    padding: 0;
+    list-style: none;
+    font-size: .85em;
+}
+
+#fileinfo .filename {
+    clear: both;
+    margin-bottom: 5px;
+}
+
+#fileinfo #control-form .form-group {
+    margin-bottom: 0;
+}
+
+#fileinfo #control-form .control-label {
+    margin-bottom: 0;
+    font-size: .9em;
+    font-weight: bold;
+}
+
+#fileinfo #control-form textarea {
+    max-width: 100%;
+}
+
+/*------------------------------------*\
+    #SPIN ICONS
+\*------------------------------------*/
+.spin {
+    -webkit-animation: spin 1s infinite linear;
+    -moz-animation: spin 1s infinite linear;
+    -o-animation: spin 1s infinite linear;
+    animation: spin 1s infinite linear;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    /* IE 9 */
+}
+
+.tag-remove-icon {
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.tags-list span {
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.tag-input {
+    display: inline;
+    width: 80%;
+}
+
+.tags-list {
+    margin-top: 5px;
+}
+
+.btn-sm {
+    margin-top: 5px;
+}
+
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/****kt 201 ****
+** Media page filemanager Design ***/
+.media-manager-box {
+    padding: 15px;
+}
+
+#filemanager_serachForm {
+    float: left;
+    width: 33.33%;
+}
+
+.filemanager_sort {
+    display: inline-block;
+    width: 200px !important;
+}
+
+.media-manager-box .dashboard {
+    width: 25%;
+    padding-top: 20px;
+}
+
+.media-manager-box .filemanager-grid {
+    float: left;
+    width: 75%;
+    padding-bottom: 20px;
+}
+
+.filemanager_sort_sec {
+    float: right;
+    text-align: right;
+    width: 66%;
+}
+
+#filemanager_serachForm .field-mediafile-filename {
+    float: left;
+    width: 78%;
+}
+
+.filemanager_search {
+    width: 100% !important;
+}
+
+#filemanager_serachForm .apply-section {
+    float: left;
+    text-align: right;
+    width: 20%;
+}
+
+.filemanager-grid .list-view {
+    width: inherit;
+}
+
+.filemanager-grid .list-view .items .item {
+    vertical-align: top;
+    margin-right: 3px;
+}
+
+.filemanager-grid .list-view .items .item span.folderName {
+    display: block;
+    text-overflow: ellipsis;
+}
+
+.media-manager-box .upload-mangaer-p a, .media-manager-box .create-folder-p button {
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .media-manager-box .filemanager-grid {
+        float: none;
+        width: 100%;
+    }
+
+    .media-manager-box .dashboard {
+        float: none;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .media-manager-box #filemanager_serachForm {
+        float: none;
+        width: 100%;
+    }
+
+    .media-manager-box .filemanager_sort_sec {
+        clear: both;
+        float: none;
+        padding-bottom: 20px;
+        text-align: left;
+        width: 100%;
+    }
+}
+
+.media-upload-manager-container {
+    padding: 20px;
+}
+
+
+/****kt 201 ****
+** Media page filemanager Design ends***/
+
+/* KT267 */
+
+.filemanager-grid .filemanager_sort_sec a>i.material-icons, .filemanager_sort_sec a>i.fa{
+   color: #5e5453;
+   font-size: 21px;
+   margin:0px 5px;
+  }
+ .filemanager-grid .grid-main-header #filemanager_serachForm {
+   height: 30px;
+ }
+ .filemanager-grid .filemanager_sort_sec
+ {
+   float: left;
+   margin: 5px 5px;
+    border-right: 1px solid #d9d9d9;
+    width : 6%;
+   }
+   .filemanager-grid .filemanager_sort_sec a:active
+    {
+   opacity: 0.8;
+   border: 4px solid #d4d0cf;
+   background-color: #d4d0cf;
+   padding: 5px 0px;
+    }
+    .filemanager-grid #mediafile-filename{
+      background-color: #fff;
+    }
+    #upload-widget.dropzone
+    {
+      background: white none repeat scroll 0 0;
+      border: 1px dashed #c8c8c8;
+      border-radius: 5px;
+      height: 80px;
+      width: 50%;
+      margin:0px 10px;
+      min-height: 80px;
+    }
+    #uploadmanager{
+       border-top: 0px solid #e5e5e5;
+    }
+
+.btn-primary { background-color: #dd4b39 !important; border-color: #d73925 !important; }
+
+#upload-widget .dz-default.dz-message { margin: 0px 0px; }
+
+#filemanager td.action-column { width: 15%; }
+
+#dropzonePreview ul>li>img { width: 20px; height: 20px; margin-right:7px; }
+
+#dropzonePreview ul,.upload-file-options ul{ list-style: none; }
+
+ul.files>.template-upload>.preview>canvas { width: 20px; height: 20px; float: left; margin-right: 7px; }
+
+ul.files>.template-download>.preview>a>img { width: 20px; height: 20px; float: left; margin-right: 7px; }
+
+ul.files>.template-download>.name>a { color: #333; }
+
+#dropzonePreview #upload-progress { width: 40%; height: 25px; margin-top: 20px; margin-right:10px; }
+#dropzonePreview #progress-bar { height: 25px; /* margin-top: 15px; */ }
+
+#folder-search {margin-top:-20px;opacity:0.84; height: 42px; padding: 0px 25px; border: 1px solid #e5e5e5; border-radius: 2px; background-color: #ffffff; color: #474747; }
+
+.folder_search input[type="text"] { position: relative; } .folder_search .folder-search-icon { top:8px; position: relative; left: 8px; color: #474747; opacity: 1; width: 16px; height: 16px; }
+
+#filemanager+hr { margin-top: 0; margin-bottom: 0; border: 0; border-top: 1px solid #d9d9d9; margin: 0px 10px; height: 11px; }
+
+a.btn.btn-default.create_folder,a.btn.btn-default.upload-file,a.btn.btn-default.create_folder:hover,a.btn.btn-default.upload-file:hover { background: #7a7a7a; color: #fff; }
+
+#modalContent { margin: 0px 15px; }
+
+ #mediafile-file-fileupload .progress { margin-top: 15px; }
+
+#kt_media_grid-search .form-group.kv-hint-special.field-mediafile-filename { margin-bottom: 0; }
+
+.media-manager-upload-view { border-top: 1px solid #d9d9d9; overflow: hidden; padding: 10px 0px; }
+
+#filemanager .table.table-striped.table-bordered>thead>tr>th { border: 0px solid #f4f4f4; }
+
+.right-inner-addon {
+  position: relative;
+ }
+.right-inner-addon i {
+  position: absolute; right: 60px; padding: 8px 25px;
+}
+
+.media-manager-or span { padding-top: 40px; position: absolute; }
+
+#upload-widget.dropzone { background: white none repeat scroll 0 0; border: 1px dashed #c8c8c8; border-radius: 5px; height: 95px; width: 75%; /* margin: 0px 10px; */ min-height: 95px; padding: 30px 54px; }
+
+.media-manager-upload-view {
+    background-color: #fff;
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+}
+
+#modalContent img {
+  float: left; width: 20%; margin-top: 5px;
+}
+
+#modalContent ul.detail {
+  list-style: none;
+  overflow: hidden;
+  padding: 0px 10px;
+}
+
+#modalContent ul.detail>li {
+  float: left;
+  width: 51%;
+}
+
+#folder-tree{
+  overflow: auto;
+}
+/*.file-upload-area {
+    clear: both;
+    width: 100%;
+}*/
+.file-upload-area .drop-element {
+    float: left;
+}
+.file-upload-area .drop-zone {
+    border: 1px dashed #ccc;
+        margin: 0px;
+    position: relative;
+}
+
+.file-upload-area .drop-zone input {
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    top: 0px;
+}
+.file-upload-area .drop-zone .drop-text {
+    text-align: center;
+    width: 100%;
+    z-index: 4;
+    display: block;
+}
+
+#mediafile-file-fileupload ul.files >li {
+    width: 45%;
+    float: left;
+    margin: 5px 11px;
+    padding: 6px 10px;
+    background: #ebebeb;
+    opacity: 0.55;
+    max-height: 100%;
+    overflow: hidden;
+}
+#mediafile-file-fileupload ul.files {
+    /* width: 50%; */
+    height: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding-left: 0;
+    /* padding: 10px 0px; */
+    margin-left: 10px;
+}
+
+.file-upload-area .drop-zone-cont {
+    width: 40%;
+}
+.file-upload-area .drop-or {
+    text-align: center;
+    width: 15%;
+}
+.file-upload-area .drop-element.drop-button {
+    margin: 0;
+    padding-top: 10px;
+    text-align: center;
+    width: 42%;
+    line-height: 32px;
+}
+#mediafile-file-fileupload {
+    padding: 0px 5px;
+}
+.media-manager-upload-view {
+    background-color: #fff;
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    padding: 10px 0px;
+    margin: 0px 10px;
+    height:120px;
+}
+
+.file-upload-text{
+  text-align : center;
+  margin-right:-15px;
+}
+
+#kt_media_grid table tbody td img {
+    border-radius: 0% !important;
+    height: 40px;
+    width: 45px;
+}
+
+.main-content-header.media-filemanager-header h1 {
+    float: left;
+    width: 33%;
+}
+.drop-element.drop-zone-cont {
+    float: left;
+    width: 42%;
+}
+.drop-zone {
+    color: #000;
+    background: #fff;
+    border: 1px dashed #ccc;
+    margin: 0px -5px;
+    position: relative;
+}
+.media-filemanager-buttons {
+    float: right;
+    width: 25%;
+    line-height: 60px;
+    padding-top: 20px;
+}
+
+.folder-extra-options
+{
+  position:relative;
+  padding-left: 15px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.jstree-default .jstree-anchor {
+  line-height: 24px;
+  height: 24px;
+  max-width: 86px;
+}
+
+.folder-extra-options {
+  float: right;
+  position: relative;
+  right: 0;
+  top: 0;
+}
+
+.folder-extra-options-content {
+  position: absolute;
+  background-color: #f5f5f5;
+  min-width: 80px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 5px 10px;
+  z-index: 1;
+  margin-top: -5px;
+  list-style: none;
+  display: none;
+  right: 0;
+}
+
+#jsTree_mediafile-filename .jstree-node {
+  white-space: normal;
+}
+
+@media screen and (max-width:1242px) and (min-width:1210px){
+  .jstree-default .jstree-anchor{
+    max-width:120px;
+  }
+}
+
+@media screen and (max-width:1209px) and (min-width:1120px){
+  .jstree-default .jstree-anchor{
+    max-width:100px;
+  }
+}
+
+@media screen and (max-width:1119px) and (min-width:1055px){
+  .jstree-default .jstree-anchor{
+    max-width:85px;
+  }
+}
+
+@media screen and (max-width:1054px) and (min-width:995px){
+  .jstree-default .jstree-anchor{
+    max-width:75px;
+  }
+}
+
+.file-upload-area .drop-element.drop-button{ line-height: 20px; padding-top: 21px; }
+/**for folder search remove icon***/
+.folder_search span.glyphicon.glyphicon-remove {
+    text-align: right;
+    float: right;
+    position: relative;
+    right: 8px;
+    top: -23px;
+    color: #808080;
+    opacity: 0.84;
+    width: 16px;
+    font-size: 12px;
+    height: 16px;
+}
+
+a.btn.btn-default.create_folder, a.btn.btn-default.upload-file, a.btn.btn-default.create_folder:hover, a.btn.btn-default.upload-file:hover {
+    background: #7a7a7a;
+    color: #fff;
+    padding: 6px 5px;
+}
+
+.row.media-manager-buttons-row .col-md-4 {
+    padding: 0px 9px;
+}
+a.btn.btn-default.add-media-root {
+    padding: 6px 5px;
+    background: #7a7a7a;
+    color: #fff;
+}
+.media-manager-upload-view{height:100%}
